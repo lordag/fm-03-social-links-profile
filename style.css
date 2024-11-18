@@ -1,0 +1,94 @@
+:root{
+    --green: hsl(75, 94%, 57%);
+    --White: hsl(0, 0%, 100%);
+    --Grey-700: hsl(0, 0%, 20%);
+    --Grey-800: hsl(0, 0%, 12%);
+    --Grey-900: hsl(0, 0%, 8%);   
+}
+
+body{
+    font-family: "Inter", sans-serif;
+    background-color: var(--Grey-900);
+    color: var(--White);
+}
+
+main{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;    
+}
+
+article{
+    text-align: center;
+    background-color: var(--Grey-800);
+    border-radius: 1.0rem;
+    padding: 2.5rem 2.5rem;
+}
+
+article img{
+    width: 100px;
+    border-radius: 50%;
+    margin-bottom: 0.6rem;
+}
+
+article h1{
+    font-weight: 500;
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 0.8rem;
+}
+
+article p{
+    font-size: 14px;
+}
+
+article p.green-text{
+    color: var(--green);
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 1.8rem;
+}
+
+article p.white-text{
+    margin-bottom: 1.8rem;
+    color: #adadad;
+}
+
+article .buttons-container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem
+}
+
+article .buttons-container button{
+    text-align: center;
+    padding: 0.8rem 6.25rem;
+    background-color: var(--Grey-700);
+    border: none;
+    border-radius: 0.5rem;
+    color: var(--White);
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: background-color 0.7s;
+}
+
+article .buttons-container button:is(:hover,:focus){
+    background-color: var(--green);
+    color: var(--Grey-800);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (max-width: 420px) {
+    article{
+        padding: 2.5rem 1.0rem;
+        margin: 0rem 0.2rem;
+    }
+
+    article .buttons-container button{
+        padding: 1rem 0.5rem;
+    }
+}
